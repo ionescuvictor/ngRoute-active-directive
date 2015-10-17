@@ -11,14 +11,22 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
             if (desiredClass == '' || typeof desiredClass == 'undefined')
                 throw 'You need to specify a desired class for when route is active: ex: <a href="something" route-active="active"></a>'
             
+            var href = "";
 
-            var href = $(element[0]).find('a').attr('href').replace("/#", "") + '/';
+            if (element.tagName != "A")
+            {
+                href = $(element[0]).find('a').attr('href').replace("/#", "") + '/';
+            }
+            else{
+                href = $(element[0]).attr('href').replace("/#", "") + '/';
+            }
+           
                         
             //this will work for any routes including routes with multiple parameters.
             var onChange = $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
 
-                var currentPath = "";
-
+               
+                console.log(current);
 
                 //for route / we get $$route undefined.
                 if (typeof current.$$route !== 'undefined') {
