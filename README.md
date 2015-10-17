@@ -21,7 +21,7 @@ The directive will find the first a tag in the parent element.Then attch the cla
 
 so we get
 
-<button class="activeBtnClass"*>
+<*button class="activeBtnClass"*>
 
 <*a href="/#/Test" >Test<*/a>
 
