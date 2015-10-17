@@ -12,7 +12,7 @@ you can also
 
 <*button route-active="activeBtnClass"*>
 
-<a* href="/#/Test" *>Test<*/a>
+<*a href="/#/Test" *>Test<*/a>
 
 <*/button>
 
