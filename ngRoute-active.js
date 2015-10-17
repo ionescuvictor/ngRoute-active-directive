@@ -25,9 +25,7 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
             //this will work for any routes including routes with multiple parameters.
             var onChange = $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
 
-               
-                console.log(current);
-
+              
                 //for route / we get $$route undefined.
                 if (typeof current.$$route !== 'undefined') {
                     if (current.$$route.originalPath.indexOf(":") > -1) {
