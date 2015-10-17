@@ -1,3 +1,5 @@
+var myApp = angular.module('myApp', ['ng-route-active']);
+
 A directive similar functionality to ui-active from ui-router.But works with ngroute.
 
 Note: the a tag must have a href attribute.
