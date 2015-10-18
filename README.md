@@ -8,7 +8,7 @@ example:
 
 <*a route-active="activeClass" href="/#/Test" *><*/a*>
 
-this will place the activeclass to the a tag.
+this will place the active class to the a tag.
 
 you can also
 
