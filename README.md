@@ -6,9 +6,9 @@ Note: the a tag must have a href attribute.
 
 example:
 
-<*a route-active="activeClass" href="/#/Test" *><*/a*>
+<*a route-active="active" href="/#/Test" *><*/a*>
 
-this will place the active class to the a tag.
+this will place the 'active' class to the a tag.
 
 you can also
 
