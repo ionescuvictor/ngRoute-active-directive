@@ -5,7 +5,7 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
     return {
         restrict: "A",
         link: function (scope, element, attrs) {
-            
+          
             var desiredClass = attrs.routeActive;
 
             if (desiredClass == '' || typeof desiredClass == 'undefined')
@@ -20,12 +20,22 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
             else{
                 href = $(element[0]).attr('href').replace("/#", "") + '/';
             }
+
+            console.log(href);
+
+            if (href.split('/').length >= 3)
+            {
+                href = '/' + href.split('/')[1];
+            }
+
+            console.log(href);
            
-                        
             //this will work for any routes including routes with multiple parameters.
             var onChange = $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+
                 var currentPath = "";
-              
+
+            
                 //for route / we get $$route undefined.
                 if (typeof current.$$route !== 'undefined') {
                     if (current.$$route.originalPath.indexOf(":") > -1) {
@@ -35,7 +45,12 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
                         currentPath = current.$$route.originalPath;
                     }
                 }
-                                
+
+                console.log(currentPath)
+                if (currentPath.split('/').length >= 3) // if we have something like /dashboard/
+                {
+                    currentPath = currentPath.substring(0, currentPath.length - 1); // remove last character aka the '/'
+                }
                 if (typeof current.$$route !== 'undefined')
                 {
                     if (href == currentPath || href == (currentPath + '/')) {
@@ -54,12 +69,16 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
                         element.removeClass(desiredClass);
                     }
                 }
+
+                console.log(currentPath)
+
                
             });
 
             scope.$on('$destroy', function () {
                 onChange();
             });
+          
         }
     };
 }]);
