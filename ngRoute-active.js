@@ -21,14 +21,11 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
                 href = $(element[0]).attr('href').replace("/#", "") + '/';
             }
 
-            console.log(href);
-
             if (href.split('/').length >= 3)
             {
                 href = '/' + href.split('/')[1];
             }
 
-            console.log(href);
            
             //this will work for any routes including routes with multiple parameters.
             var onChange = $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
@@ -46,7 +43,6 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
                     }
                 }
 
-                console.log(currentPath)
                 if (currentPath.split('/').length >= 3) // if we have something like /dashboard/
                 {
                     currentPath = currentPath.substring(0, currentPath.length - 1); // remove last character aka the '/'
@@ -70,7 +66,6 @@ angular.module('ng-route-active').directive('routeActive', ['$rootScope', '$rout
                     }
                 }
 
-                console.log(currentPath)
 
                
             });
