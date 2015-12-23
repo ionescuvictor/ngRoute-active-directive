@@ -28,7 +28,7 @@ you can also
 
 ```
 
-The directive will find the first a tag in the current element.Then attch the class to the button.
+The directive will find the first a tag in the current element.Then attach the class to the button.
 
 so we get
 
