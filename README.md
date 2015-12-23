@@ -6,15 +6,19 @@ Note: the a tag must have a href attribute.
 
 example:
 
-<*a route-active="active" href="/#/Test" *><*/a*>
+```html
+<a route-active="active" href="/#/Test"></a>
+```
 
 this will place the 'active' class to the a tag.
 
 you can also
 
-<*button route-active="activeBtnClass"*>
+```html
+<button route-active="activeBtnClass">
 
-<*a href="/#/Test" *>Test<*/a>
+<a href="/#/Test" >Test</a>
+```
 
 <*/button>
 
