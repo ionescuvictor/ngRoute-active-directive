@@ -1,7 +1,7 @@
 ```javascript
 var myApp = angular.module('myApp', ['ng-route-active']);
 ```
-A directive similar functionality to ui-active from ui-router.But works with ngroute.
+A directive similar functionality to ui-active from ui-router, but implemented for ngroute.
 
 Note: the a tag must have a href attribute.
 
@@ -11,7 +11,11 @@ example:
 <a route-active="active" href="/#/Test"></a>
 ```
 
-this will place the 'active' class to the a tag.
+this will place the 'active' class to the a tag, like so.
+
+```html
+<a route-active="active" class="active" href="/#/Test"></a>
+```
 
 you can also
 
@@ -24,7 +28,7 @@ you can also
 
 ```
 
-The directive will find the first a tag in the parent element.Then attch the class to the button.
+The directive will find the first a tag in the current element.Then attch the class to the button.
 
 so we get
 
