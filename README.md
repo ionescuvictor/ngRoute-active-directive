@@ -18,17 +18,20 @@ you can also
 <button route-active="activeBtnClass">
 
 <a href="/#/Test" >Test</a>
-```
 
-<*/button>
+</button>
+
+```
 
 The directive will find the first a tag in the parent element.Then attch the class to the button.
 
-
 so we get
 
-<*button class="activeBtnClass"*>
+```html
+<button class="activeBtnClass">
 
-<*a href="/#/Test" >Test<*/a>
+<a href="/#/Test" >Test</a>
 
-<*/button>
+</button>
+
+```
