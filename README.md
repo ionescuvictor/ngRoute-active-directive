@@ -8,13 +8,13 @@ Note: the a tag must have a href attribute.
 example:
 
 ```html
-<a route-active="active" href="/#/Test"></a>
+<a route-active="active" href="/Test"></a>
 ```
 
 this will place the 'active' class to the a tag, like so.
 
 ```html
-<a route-active="active" class="active" href="/#/Test"></a>
+<a route-active="active" class="active" href="/Test"></a>
 ```
 
 you can also
@@ -22,7 +22,7 @@ you can also
 ```html
 <button route-active="activeBtnClass">
 
-<a href="/#/Test" >Test</a>
+<a href="/Test" >Test</a>
 
 </button>
 
@@ -35,7 +35,7 @@ so we get
 ```html
 <button class="activeBtnClass">
 
-<a href="/#/Test" >Test</a>
+<a href="/Test" >Test</a>
 
 </button>
 
