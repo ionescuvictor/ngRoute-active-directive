@@ -33,9 +33,9 @@ The directive will find the first a tag in the current element.Then attach the c
 so we get
 
 ```html
-<button class="activeBtnClass">
+<button >
 
-<a href="/Test" >Test</a>
+<a class="activeBtnClass" href="/Test" >Test</a>
 
 </button>
 
