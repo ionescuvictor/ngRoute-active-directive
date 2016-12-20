@@ -33,7 +33,7 @@ The directive will find the first a tag in the current element.Then attach the c
 so we get
 
 ```html
-<button >
+<button route-active="activeBtnClass">
 
 <a class="activeBtnClass" href="/Test" >Test</a>
 
